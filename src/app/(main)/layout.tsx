@@ -1,6 +1,4 @@
 import Menu from "@/components/Menu/Menu";
-import { CustomDialogProvider } from "@/components/Provider/DialogProvider";
-import Grid from "@mui/material/Grid/Grid";
 
 const MainLayout = ({
   children,
@@ -10,9 +8,7 @@ const MainLayout = ({
   return (
     <div>
       <Menu />
-      <div style={{ marginTop: "80px" }}>
-        <CustomDialogProvider>{children}</CustomDialogProvider>
-      </div>
+      <div style={{ marginTop: "80px" }}>{children}</div>
     </div>
   );
 };

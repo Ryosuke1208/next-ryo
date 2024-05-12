@@ -39,6 +39,7 @@ const DialogPage = () => {
     });
     setModalConfig(undefined);
     console.log(ret);
+    console.log("ダイアログが閉じられました");
     if (ret === "ok") {
       console.log("削除する:OK時の処理を実行する");
       // 仮のAPIリクエスト
