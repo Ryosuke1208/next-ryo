@@ -1,13 +1,7 @@
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-  Button,
-} from "@mui/material";
 import { useState } from "react";
 import { BasicDialog } from "./BasicDialog";
+
+//link → https://qiita.com/Yametaro/items/b6e035fe06530a9f47bc
 
 type State = {
   // ダイアログの開閉状態
