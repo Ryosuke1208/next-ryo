@@ -15,6 +15,18 @@ const page = () => {
           </CardActions>
         </Card>
       </Grid>
+      <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+          <CardContent>
+            <h2>Dialogs Sample Page</h2>
+          </CardContent>
+          <CardActions>
+            <Button size="small" href="/dialogs">
+              Move Dialogs Page
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
   );
 };

@@ -1,67 +1,33 @@
 "use client";
 
-import { CustomDialog, CustomDialogProps } from "@/components/Dialog/Dialog";
+import { BasicDialog } from "@/components/Dialog/BasicDialog";
+import { useDialog } from "@/components/Dialog/useDialog";
 import {
   Button,
-  DialogTitle,
+  Dialog,
+  DialogActions,
   DialogContent,
   DialogContentText,
-  DialogActions,
+  DialogTitle,
 } from "@mui/material";
+import { resolve } from "path";
 import { useState } from "react";
 
 const DialogPage = () => {
-  const [modalConfig, setModalConfig] = useState<CustomDialogProps | undefined>(
-    undefined
-  );
+  const { openDialog, renderDialog } = useDialog();
 
-  const handleDeleteClick = async () => {
-    const ret = await new Promise<string>((resolve) => {
-      setModalConfig({
-        onClose: resolve,
-        content: (
-          <>
-            <DialogTitle>削除します。よろしいですか?</DialogTitle>
-            <DialogContent>
-              <DialogContentText>
-                削除すると二度と元に戻せません。
-              </DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button onClick={() => resolve("ok")}>OK</Button>
-              <Button onClick={() => resolve("cancel")} autoFocus>
-                Cancel
-              </Button>
-            </DialogActions>
-          </>
-        ),
-      });
-    });
-    setModalConfig(undefined);
-    console.log(ret);
-    console.log("ダイアログが閉じられました");
-    if (ret === "ok") {
-      console.log("削除する:OK時の処理を実行する");
-      // 仮のAPIリクエスト
-      const response = await fetch(
-        "https://jsonplaceholder.typicode.com/posts/1"
-      );
-      const data = await response.json();
-      console.log(data);
-    }
-    if (ret === "cancel") {
-      console.log("削除する:Cancel時の処理を実行する");
-    }
+  const handleOnClick = async () => {
+    const result = await openDialog();
+    console.log(result);
   };
 
   return (
-    <div className="App">
-      <Button variant="outlined" type="button" onClick={handleDeleteClick}>
+    <>
+      <Button variant="outlined" type="button" onClick={handleOnClick}>
         OPEN DIALOG
       </Button>
-
-      {modalConfig && <CustomDialog {...modalConfig} />}
-    </div>
+      {renderDialog()}
+    </>
   );
 };
 
