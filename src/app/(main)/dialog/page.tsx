@@ -1,17 +1,9 @@
 "use client";
 
 import { BasicDialog } from "@/components/Dialog/BasicDialog";
+import { WarningDialog } from "@/components/Dialog/WarningDialog";
 import { useDialog } from "@/components/Dialog/useDialog";
-import {
-  Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from "@mui/material";
-import { resolve } from "path";
-import { useState } from "react";
+import { Button } from "@mui/material";
 
 const DialogPage = () => {
   const { openDialog, renderDialog } = useDialog();
@@ -26,7 +18,8 @@ const DialogPage = () => {
       <Button variant="outlined" type="button" onClick={handleOnClick}>
         OPEN DIALOG
       </Button>
-      {renderDialog()}
+      {/* {renderDialog(BasicDialog)} */}
+      {renderDialog(WarningDialog)}
     </>
   );
 };

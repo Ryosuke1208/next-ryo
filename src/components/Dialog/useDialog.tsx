@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { BasicDialog } from "./BasicDialog";
+import { FC, useState } from "react";
+import { BasicDialog, BasicDialogProps } from "./BasicDialog";
 
 //link → https://qiita.com/Yametaro/items/b6e035fe06530a9f47bc
 
@@ -41,8 +41,8 @@ export const useDialog = () => {
     setState(initialState);
   };
 
-  const renderDialog = () => {
-    return <BasicDialog isOpen={state.isOpen} ok={ok} cancel={cancel} />;
+  const renderDialog = (DialogComponent: FC<BasicDialogProps>) => {
+    return <DialogComponent isOpen={state.isOpen} ok={ok} cancel={cancel} />;
   };
 
   return {
