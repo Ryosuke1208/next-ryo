@@ -18,8 +18,8 @@ const DialogPage = () => {
       <Button variant="outlined" type="button" onClick={handleOnClick}>
         OPEN DIALOG
       </Button>
-      {/* {renderDialog(BasicDialog)} */}
-      {renderDialog(WarningDialog)}
+      {renderDialog(BasicDialog)}
+      {/* {renderDialog(WarningDialog)} */}
     </>
   );
 };

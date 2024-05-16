@@ -27,6 +27,18 @@ const page = () => {
           </CardActions>
         </Card>
       </Grid>
+      <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+          <CardContent>
+            <h2>ErrorBoundary</h2>
+          </CardContent>
+          <CardActions>
+            <Button size="small" href="/error-boundary">
+              Move ErrorBoundary Page
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
   );
 };
