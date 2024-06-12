@@ -39,6 +39,18 @@ const page = () => {
           </CardActions>
         </Card>
       </Grid>
+      <Grid item xs={4}>
+        <Card sx={{ minWidth: 275 }}>
+          <CardContent>
+            <h2>Calendar</h2>
+          </CardContent>
+          <CardActions>
+            <Button size="small" href="/calendar">
+              Move Calendar Page
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
   );
 };
