@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FallbackProps } from "react-error-boundary";
 
 const ErrorFallback = () => {
   return (
