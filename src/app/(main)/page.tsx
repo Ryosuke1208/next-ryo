@@ -46,16 +46,6 @@ const Page = () => {
       <Grid item xs={4}>
         <Card>
           <CardContent>
-            <h2>Table</h2>
-          </CardContent>
-          <CardActions>
-            <Button href="/table">Move Table Page</Button>
-          </CardActions>
-        </Card>
-      </Grid>
-      <Grid item xs={4}>
-        <Card>
-          <CardContent>
             <h2>Parallel</h2>
           </CardContent>
           <CardActions>
