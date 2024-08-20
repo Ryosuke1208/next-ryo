@@ -20,6 +20,7 @@
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.17",
     "@mui/x-date-pickers": "^7.6.2",
+    "@mui/x-tree-view": "^7.13.0",
     "date-fns": "^3.6.0",
     "dayjs": "^1.11.11",
     "next": "14.2.3",

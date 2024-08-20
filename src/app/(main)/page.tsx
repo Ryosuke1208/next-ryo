@@ -93,6 +93,26 @@ const Page = () => {
           </CardActions>
         </Card>
       </Grid>
+      <Grid item xs={4}>
+        <Card>
+          <CardContent>
+            <h2>SideBar</h2>
+          </CardContent>
+          <CardActions>
+            <Button href="/sidebar">SideBar</Button>
+          </CardActions>
+        </Card>
+      </Grid>
+      <Grid item xs={4}>
+        <Card>
+          <CardContent>
+            <h2>SideBar-Layout</h2>
+          </CardContent>
+          <CardActions>
+            <Button href="/sidebar-layout">SideBar-Layout</Button>
+          </CardActions>
+        </Card>
+      </Grid>
     </Grid>
   );
 };
